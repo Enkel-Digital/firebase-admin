@@ -1,0 +1,22 @@
+{
+  "name": "@enkeldigital/firebase-admin",
+  "version": "0.1.0",
+  "description": "Wrapper over firebase-admin to simplify initialization process for both development and production environments",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Enkel-Digital/firebase-admin.git"
+  },
+  "author": "JJ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Enkel-Digital/firebase-admin/issues"
+  },
+  "homepage": "https://github.com/Enkel-Digital/firebase-admin#readme",
+  "dependencies": {
+    "firebase-admin": "^9.2.0"
+  }
+}
