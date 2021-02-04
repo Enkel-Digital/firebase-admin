@@ -26,7 +26,7 @@ module.exports = function getServiceAccountKey() {
    */
   const serviceAccountFilePath =
     process.env.serviceAccountKeyPath ||
-    require("path").join(__dirname, "../serviceAccountKey.json");
+    require("path").join(process.cwd(), "serviceAccountKey.json");
 
   // Inner import of fs module as only used conditionally
   // Use require to load and parse file into an object

@@ -17,7 +17,7 @@
     "url": "https://github.com/Enkel-Digital/firebase-admin/issues"
   },
   "homepage": "https://github.com/Enkel-Digital/firebase-admin#readme",
-  "dependencies": {
-    "firebase-admin": "^9.2.0"
+  "peerDependencies": {
+    "firebase-admin": "9.x"
   }
 }
