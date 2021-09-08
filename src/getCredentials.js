@@ -11,13 +11,11 @@ const admin = require("firebase-admin");
  * By default GCP provides "GOOGLE_APPLICATION_CREDENTIALS" env var, but this strat 1 out of 2
  * Thus using custom "GCP" env var to ensure availability
  * Refer to https://cloud.google.com/docs/authentication/production#providing_credentials_to_your_application
- *
- * @todo Might crash if applicationDefault() returns undefined and we call projectId on it
  */
 module.exports = function getCredentials() {
   return process.env.GOOGLE_APPLICATION_CREDENTIALS ||
     process.env.GCP ||
-    Boolean(admin.credential.applicationDefault().projectId)
+    Boolean(admin.credential.applicationDefault()?.projectId)
     ? admin.credential.applicationDefault()
     : admin.credential.cert(require("./getServiceAccountKey")());
 };
