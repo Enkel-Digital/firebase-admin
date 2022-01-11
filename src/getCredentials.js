@@ -1,4 +1,4 @@
-const admin = require("firebase-admin");
+const { applicationDefault, cert } = require("firebase-admin/app");
 
 /**
  * Return credentials based on hosting platform.
@@ -15,7 +15,7 @@ const admin = require("firebase-admin");
 module.exports = function getCredentials() {
   return process.env.GOOGLE_APPLICATION_CREDENTIALS ||
     process.env.GCP ||
-    Boolean(admin.credential.applicationDefault()?.projectId)
-    ? admin.credential.applicationDefault()
-    : admin.credential.cert(require("./getServiceAccountKey")());
+    Boolean(applicationDefault()?.projectId)
+    ? applicationDefault()
+    : cert(require("./getServiceAccountKey")());
 };
