@@ -4,11 +4,11 @@
  * @module Firebase Admin initialized app singleton
  */
 
-const { initializeApp } = require("firebase-admin/app");
 const getCredentials = require("./getCredentials");
 
 function initializeApp(options = {}) {
   try {
+    const { initializeApp } = require("firebase-admin/app");
     return initializeApp({
       ...options,
       credential: getCredentials(),
