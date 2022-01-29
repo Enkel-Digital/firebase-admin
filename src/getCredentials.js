@@ -13,8 +13,8 @@ const { applicationDefault, cert } = require("firebase-admin/app");
  * Refer to https://cloud.google.com/docs/authentication/production#providing_credentials_to_your_application
  */
 module.exports = function getCredentials() {
-  return process.env.GOOGLE_APPLICATION_CREDENTIALS ||
-    process.env.GCP ||
+  return process.env.GCP ||
+    process.env.GOOGLE_APPLICATION_CREDENTIALS ||
     Boolean(applicationDefault()?.projectId)
     ? applicationDefault()
     : cert(require("./getServiceAccountKey")());

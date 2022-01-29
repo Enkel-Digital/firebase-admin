@@ -3,7 +3,9 @@ Wrapper around the firebase admin library to make it easy to use regardless of w
 
 This calls initializeApp method on firebase admin module, automatically finding and loading the credentials available in the current platform and returns it. 
 
-Firebase Admin is expected to be installed, and this expects firebase admin module as a peerDependency with major version 9.x
+Firebase Admin is expected to be installed, and this expects firebase admin module as a peerDependency with major version 10.x
+
+https://cloud.google.com/docs/authentication/production#auth-cloud-implicit-nodejs
 
 ## License, Author and Contributing
 This project is developed and made available under the "MIT" License  
