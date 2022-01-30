@@ -4,22 +4,6 @@
  * @module Firebase Admin initialized app singleton
  */
 
-const getCredentials = require("./getCredentials");
-
-function initializeApp(options = {}) {
-  try {
-    const { initializeApp } = require("firebase-admin/app");
-    return initializeApp({
-      ...options,
-      credential: getCredentials(),
-    });
-  } catch (error) {
-    console.error(error);
-
-    // @todo Might potentially cut off un-finished stdout/stderr processes
-    process.exit(1);
-  }
-}
-
+const initializeApp = require("./initializeApp.js");
 module.exports = initializeApp();
 module.exports.initializeApp = initializeApp;
