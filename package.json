@@ -1,8 +1,11 @@
 {
   "name": "@enkeldigital/firebase-admin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Wrapper over firebase-admin to simplify initialization process for both development and production environments",
   "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "npm-publish": "git stash --include-untracked && npm publish && git stash apply",
     "test": "echo \"Error: no test specified\" && exit 1"
